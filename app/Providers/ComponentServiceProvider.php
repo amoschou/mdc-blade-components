@@ -6,6 +6,7 @@ use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Blade;
 
 use App\View\Components\MDC\{
+    Button,
     Drawer,
     ListComponent,
     TopAppBar,
@@ -32,8 +33,9 @@ class ComponentServiceProvider extends ServiceProvider
     */
     public function boot()
     {
-        Blade::component('list', ListComponent::class);
+        Blade::component('button', Button::class);
         Blade::component('drawer', Drawer::class);
+        Blade::component('list', ListComponent::class);
         Blade::component('top-app-bar', TopAppBar::class);
         Blade::component('top-app-bar__action-item', TopAppBar__ActionItem::class);
         Blade::component('top-app-bar__navigation-icon', TopAppBar__NavigationIcon::class);
